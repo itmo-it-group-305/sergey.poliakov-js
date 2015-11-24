@@ -2,26 +2,31 @@
  * Created by sergeypoliakov on 24.11.15.
  */
 var arr=[12,4,3,10,1,20];
-var max = arr[0];
-var mini = arr[1];
+var mini = arr[0];
+var leng = arr.length;
+var leng2 = (leng*2)-1;
 
-for (var i=0; i < arr.length; i++) {
-    if (arr[i] <= mini) {
-        mini = arr[i];
-        //console.log(mini);
+while (arr.length < leng2) {
+    for (var i=0; i < leng; i++) {
+        if (arr[i] < mini) {
+            mini = arr[i];
+        }
     }
-    if (arr[i] >= max) {
-        max = arr[i];
+
+    arr.push(mini);
+
+    for (var i=0; i < leng; i++) {
+        if (arr[i]==mini) {
+            delete arr[i];
+        }
     }
+
+    mini=arr[0];
 }
 
-arr.push(mini);
 
-for (var i=0; i < arr.length; i++) {
-    if (arr[i]==mini) {
-        delete arr[i]
-    }
+for (var i=0; i < (leng-1); i++) {
+    arr.shift();
 }
 
-
-alert("Массив без большего и нижнего значения" + arr);
+alert('Массив, выстроенный по возрастанию' + arr);
