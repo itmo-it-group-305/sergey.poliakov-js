@@ -1,0 +1,40 @@
+@import url(//necolas.github.io/normalize.css/3.0.2/normalize.css);
+@import url(reset.css);
+@import url(grid.css);
+@import url(//fonts.googleapis.com/css?family=Exo+2:400,500,700|Comfortaa:400,700,300|Ubuntu:400,500,700&subset=latin,cyrillic);
+
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background: #1c1c1c;
+    color: #fcf8fa;
+}
+
+h1 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 3em;
+    color: #ff4d00;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Exo 2', sans-serif;
+    color: #ff4d00;
+    text-align: left;
+    font-size: 2em;
+    line-height: 130%;
+}
+
+p {
+    line-height: 105%;
+    text-align: justify;
+    padding: 0.625em 0;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    padding: 2em;
+}

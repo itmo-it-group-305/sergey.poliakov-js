@@ -1,0 +1,19 @@
+.container img {
+    width: 100%;
+}
+
+.container p {
+    padding: 2em;
+}
+
+.container h1 {
+    color: aliceblue;
+}
+
+.right-date {
+    color: aquamarine;
+}
+
+.wrong-date {
+    color: #ff4d00;
+}

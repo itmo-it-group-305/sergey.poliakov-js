@@ -93,10 +93,10 @@ if (start) {
 
     //рандомизатор
 
-    for (i=0; i<=leng; i++) {
+    for (i=0; i<leng; i++) {
         x=Math.floor(Math.random()*(max-min+1))+min;
+        console.log(x);
         var obj=events[x];
-
         //Показывает картинку и название события
         fortest.innerHTML='<h2>' + obj.name + '</h2>';
         fortest.innerHTML+='<img src="' + obj.image + '" alt="' + obj.name + '">';
@@ -105,19 +105,18 @@ if (start) {
         if (answer==obj.date) {
             counter++;
             alert('Вы ответили правильно!');
-            fortest.innerHTML+='<p class="right.date>' + obj.date + '</p>';
+            fortest.innerHTML+='<p class="right.date">' + obj.date + '</p>';
         }
         else {
             alert('Вы ошиблись');
-            fortest.innerHTML+='<p class="wrong.date>' + obj.date + '</p>';
+            fortest.innerHTML+='<p class="wrong.date">' + obj.date + '</p>';
         }
         fortest.innerHTML+='<p>'+obj.description+'</p>';
-
         events.splice(x,1);
         max--;
     }
-        alert('Узнать свой результат');
-        fortest.innerHTML='<h2>Поздравляем</h2> <p>Вы ответили правильно на ' + counter +  ' вопросов</p>'
+    alert('Узнать свой результат');
+    fortest.innerHTML='<h2>Поздравляем</h2> <p>Вы ответили правильно на ' + counter +  ' вопросов</p>'
 
 }
 
@@ -128,4 +127,5 @@ else {
 
 //2. Как только пользователь нажал начать показывать ему событие
 //3. 10 событий нужно либо сделать разными объектами, либо одним объектом, чтобы можно было рандомно их показывать
+
 
