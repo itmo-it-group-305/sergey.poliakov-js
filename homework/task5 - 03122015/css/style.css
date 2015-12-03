@@ -1,0 +1,53 @@
+@import url(//necolas.github.io/normalize.css/3.0.2/normalize.css);
+@import url(reset.css);
+@import url(grid.css);
+@import url(//fonts.googleapis.com/css?family=Exo+2:400,500,700|Comfortaa:400,700,300|Ubuntu:400,500,700&subset=latin,cyrillic);
+
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background: #fff;
+    background: #fcf8fa;
+}
+
+p {
+    line-height: 105%;
+    text-align: justify;
+    padding: 0.625em 0;
+}
+
+.blueback {
+    background: darkblue;
+}
+
+.orange {
+    background: orangered;
+}
+
+
+fieldset {
+    border: 3px solid #2980b9;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+textarea {
+    background: #fff;
+    border: 1px solid #34495e;
+    border-radius: 10px;
+    width: 100%;
+    font-family: 'Ubuntu', Arial, sans-serif;
+    padding: 10px;
+}
+
+.chat {
+    padding: 3em;
+}
+
+.answer {
+    margin: 3em;
+}
+
+img {
+    width: 100%;
+}

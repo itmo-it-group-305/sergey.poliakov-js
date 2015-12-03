@@ -85,7 +85,7 @@ var max = leng-1;
 var counter = 0;
 var x = Infinity;
 
-fortest=document.getElementById("fortest");
+var fortest=document.getElementById("fortest");
 
 start=confirm('Добрый день! \n Мы представляем вашему вниманию исторический тест \n')
 
@@ -95,7 +95,7 @@ if (start) {
 
     for (i=0; i<leng; i++) {
         x=Math.floor(Math.random()*(max-min+1))+min;
-        console.log(x);
+        //console.log(x);
         var obj=events[x];
         //Показывает картинку и название события
         fortest.innerHTML='<h2>' + obj.name + '</h2>';
@@ -116,7 +116,7 @@ if (start) {
         max--;
     }
     alert('Узнать свой результат');
-    fortest.innerHTML='<h2>Поздравляем</h2> <p>Вы ответили правильно на ' + counter +  ' вопросов</p>'
+    fortest.innerHTML='<h2>Поздравляем</h2> <p>Вы ответили правильно на ' + counter +  ' вопросов</p>';
 
 }
 
