@@ -1,0 +1,22 @@
+#first,
+#second {
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin: 10px;
+ }
+
+
+.red {
+    background: red;
+}
+
+.green {
+    background: green;
+}
+
+.none {
+    background: grey;
+}
