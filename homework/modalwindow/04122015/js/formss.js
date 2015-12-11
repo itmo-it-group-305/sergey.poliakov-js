@@ -93,32 +93,37 @@ function getField () {
                 var phonecheck = checkPhone(phone.value)
                 if (phonecheck) {
                     obj.removeAttribute("style");
+                    mailcheck();
+                    closeForm();
+                    var message = document.getElementById('message');
+                    message.innerHTML = '<p>Спасибо! Ваша форма принята</p>';
                 }
                 else {
                     obj.setAttribute("style", "border: 1px dashed red; border-radius: 10px")
                 };
             };
-            //Проверка почты
-            if (fields[i] == 'email') {
-                var mailcheck = checkMail(email.value)
-                if (mailcheck) {
-                    obj.removeAttribute("style");
-                }
-                else {
-                    obj.setAttribute("style", "border: 1px dashed red; border-radius: 10px")
-                };
-            };
+            mailcheck();
         }
         else {
             obj.setAttribute("style", "border: 1px dashed red; border-radius: 10px")
         }
     }
+
+    function mailcheck () {
+        if (fields[i] == 'email') {
+            var mailcheck = checkMail(email.value)
+            if (mailcheck) {
+                obj.removeAttribute("style");
+            }
+            else {
+                obj.setAttribute("style", "border: 1px dashed red; border-radius: 10px")
+            };
+        };
+    }
 }
 
 //Закрытие окна:
-//    closeForm();
-//var message = document.getElementById('message');
-//message.innerHTML = '<p>Спасибо! Ваша форма принята</p>';
+
 
 var startcode = document.getElementById('getYourId');
 startcode.setAttribute('onclick','openForm()');
