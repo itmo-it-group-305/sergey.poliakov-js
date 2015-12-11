@@ -2,15 +2,20 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>Modal window</title>
 </head>
 <body>
 
     <div class="wrapper">
-        <button id="getYourId">Нажми на кнопку, получишь результат</button>
-        <div id='form'>
-        </div>
-        <div id='message'>
+        <div class="row">
+            <div id='message' class="col-8 offset-2 message">
+            </div>
+            <div class="col-6 offset-3 message">
+                <button id="getYourId">Нажми на кнопку, получишь результат</button>
+            </div>
+            <div id='form' class="col-6 offset-3 form">
+            </div>
         </div>
     </div>
 

@@ -87,25 +87,25 @@ function getField () {
     for (i in fields) {
         var obj = document.getElementById(fields[i]);
         if (checkEmptyField (obj)) {
-            obj.removeAttribute("style");
+            obj.setAttribute("class", "none");
             //Проверка телефона
             if (fields[i] == 'phone') {
                 var phonecheck = checkPhone(phone.value)
                 if (phonecheck) {
-                    obj.removeAttribute("style");
+                    obj.setAttribute("class", "none")
                     mailcheck();
                     closeForm();
                     var message = document.getElementById('message');
-                    message.innerHTML = '<p>Спасибо! Ваша форма принята</p>';
+                    message.innerHTML = '<p>Спасибо! Ваша форма принята. Если хотите отправить снова нажимте на кнопку:</p>';
                 }
                 else {
-                    obj.setAttribute("style", "border: 1px dashed red; border-radius: 10px")
-                };
+                    obj.setAttribute("class", "wrong")
+                };git
             };
             mailcheck();
         }
         else {
-            obj.setAttribute("style", "border: 1px dashed red; border-radius: 10px")
+            obj.setAttribute("class", "wrong")
         }
     }
 
@@ -113,10 +113,10 @@ function getField () {
         if (fields[i] == 'email') {
             var mailcheck = checkMail(email.value)
             if (mailcheck) {
-                obj.removeAttribute("style");
+                obj.setAttribute("class", "none")
             }
             else {
-                obj.setAttribute("style", "border: 1px dashed red; border-radius: 10px")
+                obj.setAttribute("class", "wrong")
             };
         };
     }
@@ -129,6 +129,8 @@ var startcode = document.getElementById('getYourId');
 startcode.setAttribute('onclick','openForm()');
 
 function openForm() {
+    var message = document.getElementById('message');
+    message.innerHTML = '';
     var parent = document.getElementById('form');
     parent.appendChild ( builderForm (form));
     var startcode = document.getElementById('getYourId');
