@@ -1,0 +1,73 @@
+@import url(//necolas.github.io/normalize.css/3.0.2/normalize.css);
+@import url(reset.css);
+@import url(grid.css);
+@import url(font-awesome.min.css);
+@import url(//fonts.googleapis.com/css?family=Ubuntu:400,500,700|Roboto:400,300&subset=latin,cyrillic);
+@import url(menu.css);
+
+@font-face {
+    font-family: "Novecentowide";
+    src: url("../fonts/novecentowide-medium-webfont.woff") format('woff');
+}
+
+@font-face {
+    font-family: "Novecentowide";
+    src: url("../fonts/novecentowide-demibold-webfont.woff") format ('woff');
+    font-weight: bold;
+}
+
+body {
+    background: #e6e6e6;
+    color: #010101;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+img {
+    width: 100%;
+}
+
+article {
+    background: white;
+    margin: 2em 0em;
+    padding: 1.5em;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px dashed #d6d6d6;
+}
+
+article h2 {
+    font-size: 2em;
+    margin: 0.5em 0;
+    font-family: 'Novecentowide', sans-serif;
+}
+
+article time:after {
+    content: ' /'
+}
+
+article header p {
+    font-style: italic;
+}
+
+.imageholder {
+    padding: 1em;
+}
+
+aside p,
+article p {
+    margin: 0.5em 0;
+}
+
+a {
+    color: #4fa1b6;
+}
+
+aside {
+    background: white;
+    margin: 2em 0em;
+    padding: 1.5em;
+}
+
