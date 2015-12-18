@@ -2,14 +2,50 @@
  * Created by sergeypoliakov on 14.12.15.
  */
 jQuery(document).ready (function () {
-        jQuery('button').click( function() {
-            var code = jQuery(this).attr('code');
-            var name = jQuery(this).attr('name');
-            var price = jQuery(this).attr('price');
-            jQuery('.basket').append('<p>' + code + '</p> \n' +'<p>' + name + '</p> \n' + '<p>' + price + '</p>')
+    //корзина
+    var basket = {
+        sum: 0,
+        addItem: function (price) {
+            this.sum+=price;
+        },
+        deleteItem: function(price) {
+            this.sum-=price;
+        },
+        renewBasket: function() {
+            jQuery('.basketSum').html('<p class="sum">Sum: ' + this.sum + '</p>');
+        }
+        };
 
-        });
-        jQuery('.')
+
+    //добавление товара
+    jQuery('.addItem').click( function() {
+        //объект для добавки в корзину
+        var newItem = {};
+        newItem.code = jQuery(this).attr('code');
+        newItem.name = jQuery(this).attr('name');
+        newItem.price = parseInt(jQuery(this).attr('price'));
+        //добавление в корзину
+        jQuery('.newItems').append('<div class="row"> <div class="col-3"> <p>' + newItem.code + '</p> <h3>' + newItem.name + '</h3> <p>' + newItem.price + '</p> </div> <div class="col-6"> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore natus odit rerum! Accusamusdebitis dicta, eius esse eveniet facilis fugiat harum libero optio possimus praesentium quisquisquam sit tempora veritatis.</p> </div> <div class="col-3"> <button class="deleteOne" price=' + newItem.price + '>Delete that</button> </div> </div>');
+        //обновление суммы
+        basket.addItem(newItem.price);
+        basket.renewBasket();
+    });
+
+    //кнопка удалить один
+    jQuery('.deleteOne').click( function() {
+        var deletedPrice = parseInt(jQuery(this).attr('price'));
+        jQuery(this).closest('.item').remove();
+        basket.deleteItem(deletedPrice);
+        basket.renewBasket();
+    });
+
+    //кнопка удалить все
+    jQuery('.deleteAll').click( function() {
+        jQuery('.newItems').empty();
+        basket.sum = 0;
+        basket.renewBasket();
+    });
+
 });
 
 /*

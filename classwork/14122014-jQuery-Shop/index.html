@@ -2,16 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>14 december</title>
 </head>
 <body>
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 
 <div class="wrapper">
-    <div class="basket">
 
+    <div class="fullbasket">
+
+        <div class="row">
+            <div class="col-12">
+                <h2>Корзина</h2>
+            </div>
+        </div>
+
+        <div class="newItems">
+            <!--<div class="row">-->
+                <!--<div class="col-3">-->
+                    <!--<p>PRODUCT CODE</p>-->
+                    <!--<h3>PROCUCT NAME</h3>-->
+                    <!--<p>PRODUCT PRICE</p>-->
+                <!--</div>-->
+                <!--<div class="col-6">-->
+                    <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore natus odit rerum! Accusamus-->
+                        <!--debitis dicta, eius esse eveniet facilis fugiat harum libero optio possimus praesentium quis-->
+                        <!--quisquam sit tempora veritatis.</p>-->
+                <!--</div>-->
+                <!--<div class="col-3">-->
+                    <!--<button class="deleteOne" price=' + newItem.price + '>Delete that</button>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="row">
+            <div class="col-9 basketSum">
+                <p class="sum">Sum: 0</p>
+            </div>
+            <div class="col-3">
+                <button class="deleteAll">Empty basket</button>
+            </div>
+        </div>
     </div>
-<button code="1020" name="Vibrator" price=260>Бла</button>
+
+
+    <div class="items">
+        <div class="row showItem">
+            <div class="col-3">
+                <img src="img/item.png" alt="item">
+            </div>
+            <div class="col-6">
+                <h2>Товар</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur beatae consectetur dicta eos illo in, laboriosam laudantium maiores minus natus nobis odio placeat qui soluta unde vitae, voluptas. Cupiditate, quam.
+                </p>
+            </div>
+            <div class="col-3">
+                <p>Price: 1000 eur</p>
+                <button class='addItem' code="1020" name="Blala" price=260>Бла</button>
+            </div>
+        </div>
+
+        <div class="row showItem">
+            <div class="col-3">
+                <img src="img/item.png" alt="item">
+            </div>
+            <div class="col-6">
+                <h2>Товар</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur beatae consectetur dicta eos illo in, laboriosam laudantium maiores minus natus nobis odio placeat qui soluta unde vitae, voluptas. Cupiditate, quam.
+                </p>
+            </div>
+            <div class="col-3">
+                <p>Price: 1000 eur</p>
+                <button class='addItem' code="1030" name="Milsads" price=500>Блала</button>
+            </div>
+        </div>
+    </div>
+
 </div>
 <script type="text/javascript" src="js/shop.js"></script>
 
