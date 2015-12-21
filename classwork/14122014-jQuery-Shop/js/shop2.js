@@ -45,6 +45,45 @@ jQuery(function () {
         },
         discount: function () {
         },
+        postCreate: function (somethingNew) {
+            jQuery('.items').append(Mustache.render(postTemplate, somethingNew));
+        },
     };
     basket.init();
 });
+
+
+//Создание усами новой единицы
+var postTemplate = '<div class="row showItem">' +
+    '\n <div class="col-3">' +
+    '\n  <img src="{{imageSrc}}" alt="{{#imageAlt}} {{imageAlt}} {{/imageAlt}} {{^imageAlt}} Something on the picture {{/imageAlt}}">' +
+    '\n </div>' +
+    '\n <div class="col-6">' +
+    '\n <h2>{{title}}</h2>' +
+    '\n <p>' +
+    '\n {{text}}' +
+    '\n </p>' +
+    '\n </div>' +
+    '\n <p>' +
+    '\n {{price}} eur' +
+    '\n </p>' +
+    '\n <button class="addItem" code="{{code}}" name="{{name}}" price={{price}}>Купить</button>' +
+    '\n </div>' +
+    '\n </div>';
+
+
+//JSON-объект для магазинной единицы
+var somethingNew = {
+    "title": "That's something new",
+    "imageSrc": "img/mustache.jpg",
+    "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum libero pariatur tempora? Culpa eos explicabo laborum libero mollitia porro temporibus tenetur. Amet ex excepturi impedit labore molestiae neque numquam voluptate",
+    "price": 1000,
+    "code": 6009,
+    "name": "New Item"
+}
+
+
+
+
+
+
