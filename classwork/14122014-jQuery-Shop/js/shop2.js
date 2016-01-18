@@ -80,9 +80,14 @@ var somethingNew = {
     "price": 1000,
     "code": 6009,
     "name": "New Item"
+};
+
+//postCreator от Усов
+var postCreator = function (somethingNew) {
+    var makePost = document.querySelector('.items');
+    var getPost = Mustache.render(postTemplate, somethingNew);
+    makePost.innerHTML += getPost;
 }
-
-
 
 
 
